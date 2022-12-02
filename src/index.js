@@ -1,12 +1,4 @@
-import { displayWeatherData, getWeatherData } from "./weather.js";
-
-getWeatherData("London").then(data => {
-    displayWeatherData(data);
-});
-
-getWeatherData("BrozerLAnd").then(data => {
-    displayWeatherData(data);
-});
+import { setSearchbarFunctionality } from "./weather.js";
 
 function CreateDisplay() {
     const header = createHeader();
@@ -47,3 +39,4 @@ function createSearchSection() {
 }
 
 CreateDisplay();
+setSearchbarFunctionality();
