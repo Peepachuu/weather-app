@@ -1,0 +1,35 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body, html {
+    height: 100%;
+}
+
+:root {
+    --main-background-color: #192734;
+    --main-text-color: white;
+    --pop-color: rgb(42, 189, 103);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--main-background-color);
+}
+
+header {
+    text-align: center;
+    color: var(--main-text-color);
+    padding: 8px;
+    border-bottom: 2px solid var(--pop-color);
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.search input, .search button {
+    font-size: 1.2rem;
+}
