@@ -16,6 +16,7 @@ function displayWeatherData(data) {
         return ;
     }
     
+    const weatherCard = document.querySelector(".weather");
     const cityName = document.querySelector(".city");
     const temp = document.querySelector(".temp");
     const windSpeed = document.querySelector(".wind");
@@ -25,8 +26,11 @@ function displayWeatherData(data) {
     temp.textContent = `${data.main.temp}°C`;
     tempFeelsLike.textContent = `Feels like: ${data.main.feels_like}°C`;
     humidity.textContent = `Humidity: ${data.main.humidity}%`;
-    windSpeed.textContent = `Wind speed: ${data.wind.speed}km/h`;
+    windSpeed.textContent = `Wind: ${data.wind.speed} km/h`;
     cityName.textContent = data.name;
+    if (weatherCard.classList == "weather") {
+        weatherCard.classList.toggle("visible");
+    }
 }
 
 export function setSearchbarFunctionality() {

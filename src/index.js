@@ -3,9 +3,9 @@ import { setSearchbarFunctionality } from "./weather.js";
 function CreateDisplay() {
     const header = createHeader();
     const main = createMainContent();
-    const weatherCard = createWeatherCard();
-
-    main.appendChild(weatherCard);
+    const weatherSection = createWeatherSection();
+    
+    main.appendChild(weatherSection);
     document.body.append(header, main);
 }
 
@@ -38,6 +38,13 @@ function createSearchSection() {
     searchButton.textContent = "Search";
     searchSection.append(searchbar, searchButton);
     return searchSection;
+}
+
+function createWeatherSection() {
+    const weatherSection = document.createElement("section");
+    weatherSection.classList.add("weatherSection");
+    weatherSection.appendChild(createWeatherCard());
+    return weatherSection;
 }
 
 function createWeatherCard() {
