@@ -11,6 +11,7 @@ body, html {
     --main-background-color: #192734;
     --main-text-color: white;
     --pop-color: rgb(42, 189, 103);
+    --secondary-background-color: rgb(21, 32, 43);
 }
 
 body {
@@ -32,4 +33,11 @@ header {
 
 .search input, .search button {
     font-size: 1.2rem;
+}
+
+.weather {
+    background-color: var(--secondary-background-color);
+    color: var(--main-text-color);
+    padding: 16px;
+    border-radius: 3px;
 }

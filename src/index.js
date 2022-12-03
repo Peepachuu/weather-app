@@ -3,7 +3,9 @@ import { setSearchbarFunctionality } from "./weather.js";
 function CreateDisplay() {
     const header = createHeader();
     const main = createMainContent();
+    const weatherCard = createWeatherCard();
 
+    main.appendChild(weatherCard);
     document.body.append(header, main);
 }
 
@@ -36,6 +38,27 @@ function createSearchSection() {
     searchButton.textContent = "Search";
     searchSection.append(searchbar, searchButton);
     return searchSection;
+}
+
+function createWeatherCard() {
+    const weatherCard = document.createElement("section");
+    weatherCard.classList.add("weather");
+    
+    const cityName = document.createElement("h2");
+    cityName.classList.add("city");
+
+    const temp = document.createElement("h3");
+    const windSpeed = document.createElement("p");
+    const humidity = document.createElement("p");
+    const tempFeelsLike = document.createElement("p");
+
+    windSpeed.classList.add("wind");
+    humidity.classList.add("humidity");
+    tempFeelsLike.classList.add("feelsLike");
+    temp.classList.add("temp");
+
+    weatherCard.append(cityName, temp, tempFeelsLike, humidity, windSpeed);
+    return weatherCard;
 }
 
 CreateDisplay();
